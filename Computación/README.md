@@ -1,4 +1,4 @@
-# OpenAexGroup - Filtro de artículos asociados a palabra clave de institución
+# OpenAlexGroup - Filtro de artículos asociados a palabra clave de institución
 
 Esta aplicación permite consultar los artículos asociados a una institución basándose en una palabra clave, la cual es ingresada como un parámetro de URL.
 
