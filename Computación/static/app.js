@@ -13,7 +13,9 @@ function Get(yourUrl){
   Httpreq.send(null);
   return Httpreq.responseText;          
 }
+
 const output = document.querySelector(".output");
+const resumen = document.querySelector("#resumen");
 //console.log(output); // <div class="output"></div>
 
 //output.textContent = "New Content";
@@ -44,6 +46,7 @@ window.addEventListener("DOMContentLoaded", () => {
     .then((data) => {
       // we call that data here
       // console.log(data); // check the data on the console
+      resumen.innerHTML = `Coincidencias: ${data.length}`;
       output.innerHTML = ""; // Initial content is empty
       data.forEach((el) => {
         // loop through the json data using forEach method
