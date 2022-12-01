@@ -1,29 +1,10 @@
-# OpenAlexGroup
-## Backend
-O use la documentación del API, a continuación, desplegando el botón "GET" y despúes de hacer click sobre el botón "Try it out", introducir la identificación en la caja "`student_id`" y pulsar el botón "Execute":
-* [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs)
+# OpenAexGroup - Filtro de artículos asociados a palabra clave de institución de autores
 
-# Fast API
-See install options and usage at: https://fastapi.tiangolo.com/
-```
-$ uvicorn main:app --reload --host
-```
-and copy and paste the url in your browser, e.g:
+Esta aplicación permite consultar los artículos asociados a una institución basándose en una palabra clave, la cual es ingresada como un parámetro de URL.
 
-http://127.0.0.1:8000/
+# Ejemplo de uso
 
-You can now filter with the JSON keys into the url, e.g:
+Ingresar por url: http://127.0.0.1:8000/ devolverá una lista de todos los artículos que estén asociados a una institución en la base de datos.
+Ingresar parámetro por URL: http://127.0.0.1:8000/?affiliation=nombre%20de%20institución devolverá todos los artículos donde al menos uno de los autores esté asociado a una institución que en su nombre lleve el nombre de la variable guardada en 'affiliation'.
 
-http://127.0.0.1:8000/?student_id=1001735333
-
-
-
-## Frontend
-```
-$ python3 -m http.server 8001
-```
-
-See:
-* https://www.geeksforgeeks.org/how-to-use-the-javascript-fetch-api-to-get-data/
-* https://stackoverflow.com/questions/12460378/how-to-get-json-from-url-in-javascript
-* https://stackoverflow.com/a/22790025/2268280
+El parámetro 'affiliation' puede ser una palabra clave, como facom. No es case-sensitive, por lo que http://127.0.0.1:8000/?affiliation=facom equivale a http://127.0.0.1:8000/?affiliation=FACom
