@@ -33,7 +33,7 @@ file='https://raw.githubusercontent.com/linagiraldom/Parcial2/main/Computación/
 
 @app.get("/")
 def read_item(affiliation	: str = ""):
-	"""
+    """
     Esta aplicación permite consultar los artículos asociados a una institución basándose en una palabra clave,
     la cual es ingresada como un parámetro de URL.
 	
